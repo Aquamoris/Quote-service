@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header'
-import {BrowserRouter, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Main from "./components/Main/Main";
 
 const App = (props) => {
     return (
@@ -8,7 +9,7 @@ const App = (props) => {
             <div className="App">
                 <Header headerState={props.state.header}></Header>
                 <Routes>
-
+                    <Route path='/' element={<Main mainState={props.state.main} />} />
                 </Routes>
             </div>
         </BrowserRouter>
