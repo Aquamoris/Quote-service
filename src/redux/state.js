@@ -2,11 +2,20 @@ let state = {
     _state: {
         header: {
             links: [
-                {id: 1, url: 'https://google.com', name: 'Google'},
-                {id: 2, url: 'https://ya.ru/', name: 'Yandex'},
-                {id: 3, url: 'https://ya.ru/', name: 'Yandex'},
-                {id: 4, url: 'https://ya.ru/', name: 'Yandex'},
-                {id: 5, url: 'https://youtube.com/', name: 'Youtube'},
+                {name: 'Главная страница', url: '/main'},
+                {name: 'Компания', url: '/company'},
+                {name: 'Соискатель', url: '/applicant'},
+                {name: 'Вакансия', url: '/vacancy'},
+                {name: 'Контакты', url: '/contacts'},
+            ],
+            authentication: [
+                {name: 'Авторизация', url: '/authorization'},
+                {name: 'Регистрация', url: '/registration'},
+            ],
+        },
+        main: {
+            professions: [
+                {name: 'Программист'}
             ]
         }
     },

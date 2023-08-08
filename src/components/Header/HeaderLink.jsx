@@ -1,6 +1,8 @@
+import {NavLink} from "react-router-dom";
+
 const HeaderLink = (props) => {
     return (
-        <a href={props.to}>{props.name}</a>
+            <NavLink to={props.to}>{props.name}</NavLink>
     );
 }
 
