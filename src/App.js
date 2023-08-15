@@ -9,7 +9,11 @@ const App = (props) => {
             <div className="App">
                 <Header headerState={props.state.header}></Header>
                 <Routes>
-                    <Route path='/' element={<Main mainState={props.state.main} />} />
+                    <Route path='/' element={<Main
+                        mainState={props.state.main}
+                        searchInputChange={props.searchInputChange}
+                        searchingVacancy={props.searchingVacancy}/>}>
+                    </Route>
                 </Routes>
             </div>
         </BrowserRouter>

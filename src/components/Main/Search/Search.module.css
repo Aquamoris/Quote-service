@@ -1,0 +1,32 @@
+.wrapper {
+    background-image: url("../../.././img/bg-search.png");
+    height: 50vh;
+}
+
+.input {
+    height: 48px;
+    width: 550px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #babdbf;
+}
+
+.img {
+    width: 50px;
+}
+
+.searchButton {
+    background: #1785E5;
+    color: white;
+    height: 48px;
+    width: 135px;
+    padding: 0 16px;
+    font-size: 14px;
+    border: 1px solid #1785E5;
+    border-radius: 4px;
+}
+
+.search {
+    width: 100px;
+    height: 18px;
+}

@@ -6,11 +6,20 @@ import state from './redux/state'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App state={state.getState()}/>
-  </React.StrictMode>
-);
+
+let rerenderTree = () => {
+    root.render(
+        <React.StrictMode>
+            <App state={state.getState()}
+                 searchInputChange={state.searchInputChange.bind(state)}
+                 searchingVacancy={state.searchingVacancy.bind(state)}/>
+        </React.StrictMode>
+    );
+}
+
+rerenderTree(state.getState());
+
+state.subscribe(rerenderTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
