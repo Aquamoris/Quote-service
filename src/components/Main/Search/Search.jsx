@@ -8,12 +8,17 @@ const Search = (props) => {
                 name={v.name}
                 requiredExperience={v.requiredExperience}
                 salary={v.salary}
+                id={v.id}
+                address={v.address}
+                company={v.company}
             />)
         );
+
 
     const searchInput = React.createRef();
     let searchingVacancy = () => {
         props.searchingVacancy();
+        searchInput.current.value = '';
     }
 
     let searchInputChange = () => {

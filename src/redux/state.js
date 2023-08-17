@@ -1,3 +1,7 @@
+import sber from '../img/sber-logo.jpeg'
+import alpha from '../img/alpha-logo.png'
+import cld from '../img/CLD-Construction-logo.jpeg'
+
 let state = {
     _state: {
         header: {
@@ -5,12 +9,12 @@ let state = {
                 {name: 'Главная страница', url: '/'},
                 {name: 'Компания', url: '/company'},
                 {name: 'Соискатель', url: '/applicant'},
-                {name: 'Вакансия', url: '/vacancy'},
+                {name: 'Вакансии', url: '/vacancy'},
                 {name: 'Контакты', url: '/contacts'},
             ],
             authentication: [
-                {name: 'Авторизация', url: '/authorization'},
-                {name: 'Регистрация', url: '/registration'},
+                {name: 'Создать резюме', url: '/registration'},
+                {name: 'Войти', url: '/authorization'},
             ],
         },
         main: {
@@ -37,8 +41,12 @@ let state = {
                 name: 'Программист Java',
                 salary: 120000,
                 requiredExperience: '1-3 года',
-                companyId: 1,
-                url: '/1',
+                address: 'Москва',
+                company: {
+                    id: 1,
+                    name: 'Сбер',
+                    logo: sber,
+                },
             },
             {
                 id: 2,
@@ -46,8 +54,12 @@ let state = {
                 name: 'Программист C# Senior',
                 salary: 270000,
                 requiredExperience: '3-6 лет',
-                companyId: 1,
-                url: '/2',
+                address: 'Москва',
+                company: {
+                    id: 1,
+                    name: 'Сбер',
+                    logo: sber,
+                },
             },
             {
                 id: 3,
@@ -55,17 +67,25 @@ let state = {
                 name: 'Data scientist junior',
                 salary: 80000,
                 requiredExperience: 'без опыта',
-                companyId: 1,
-                url: '/3',
+                address: 'Москва',
+                company: {
+                    id: 1,
+                    name: 'Сбер',
+                    logo: sber,
+                },
             },
             {
                 id: 4,
                 specialization: 'экономика || экономист || финансы',
-                name: 'Экономист Сбер',
+                name: 'Экономист Альфа банк',
                 salary: 60000,
                 requiredExperience: '1-3 года',
-                companyId: 3,
-                url: '/4',
+                address: 'Москва',
+                company: {
+                    id: 3,
+                    name: 'Альфа Банк',
+                    logo: alpha,
+                },
             },
             {
                 id: 5,
@@ -73,8 +93,12 @@ let state = {
                 name: 'Архитектор уникальных зданий и сооружений',
                 salary: 250000,
                 requiredExperience: '3-6 лет',
-                companyId: 7,
-                url: '/5',
+                address: 'Москва',
+                company: {
+                    id: 7,
+                    name: 'CLD Construction',
+                    logo: cld,
+                },
             },
         ]
     },
@@ -103,7 +127,6 @@ let state = {
         }
 
         console.log(this._state.main.search.result);
-        this._state.main.search.inputText = '';
         this._callSubscriber(this._state);
     },
 

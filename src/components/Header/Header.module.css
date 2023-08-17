@@ -1,3 +1,27 @@
 .header {
+    display: flex;
+    background-color: #3B65EA;
+    height: 100px;
+    color: white;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.header > a {
+    color: white;
+    text-decoration: none;
+}
+
+.authButton {
+    height: 40px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid thin white;
+    border-radius: 20px;
+}
+
+.authButton > a {
+    text-decoration: none;
+    color: white;
 }
